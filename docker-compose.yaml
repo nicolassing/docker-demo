@@ -3,5 +3,9 @@ version: '3.7'
 services:
     nginx:
         image: nginx:latest
+        volumes:
+            - ./:/srv/docker-demo
+            - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
         ports:
             - '80:80'
+              
